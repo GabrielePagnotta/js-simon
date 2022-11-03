@@ -49,16 +49,17 @@ function casual_number(num){
                 
             }
 
-            else{
+            else if(numbers == array_1[i]){
+                alert("giusto");
                 show = document.getElementById('display').innerText = "hai vinto";
-
+                
             }
 
     }
-
+    
     }
 
-
+   
         
     
 
