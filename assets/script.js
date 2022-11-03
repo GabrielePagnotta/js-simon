@@ -1,6 +1,8 @@
 // creo un array:
 let array_1 = [];
-let show = document.getElementById('display')
+let array_2 = [];
+let show = document.getElementById('display');
+let i = 0
 
 
 
@@ -18,7 +20,8 @@ function casual_number(num){
     show.innerHTML=`i numeri sono: ${array_1}`
 
 } 
- setTimeout(display_info,3000);
+ setTimeout(display_info,1000);
+ setTimeout(input,2000);
     
 
     function display_info(){
@@ -27,43 +30,40 @@ function casual_number(num){
         
     }
 
+    
 
-    // l'utente inserisce i numeroi
-    setTimeout(input_utente, 4000);
 
-    function input_utente(){
-        for (let i = 0; i < 5; i++) {
-            let input= parseInt(prompt("inserisci il numero"))
-            
-        }
-        
+    // l'utente inserisce i numeri
+    
+
+    function input(){
+        for (let i = 0;i < 5; i++) {
+            let numbers = parseInt(prompt(`inserisci il numero ${i + 1}`))
+            array_2.push(numbers);
+
+            // controllo la condizione
+            if (numbers != array_1[i]) {
+                alert("hai perso")
+                show = document.getElementById('display').innerText = "hai perso la partita";
+                break;
+                
+            }
+
+            else{
+                show = document.getElementById('display').innerText = "hai vinto";
+
+            }
+
     }
 
-    console.log(input_utente())
-
-    
-   
+    }
 
 
-
-   
-
-    
-
-  
-    
-
-    
-   
-
-    
-
-   
-
-
-
-
-
-
-    
         
+    
+
+   
+
+
+
+    
